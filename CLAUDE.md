@@ -59,13 +59,19 @@ git clone git@github.com:Lens-Academy/lens-relay-server.git
 
 # Web editor
 git clone git@github.com:Lens-Academy/lens-editor.git
+
+# Relay.md Obsidian plugin (upstream, read-only reference)
+git clone https://github.com/No-Instructions/Relay.git relay-obsidian-plugin
 ```
 
 If using jj:
 ```bash
 jj git clone git@github.com:Lens-Academy/lens-relay-server.git
 jj git clone git@github.com:Lens-Academy/lens-editor.git
+jj git clone https://github.com/No-Instructions/Relay.git relay-obsidian-plugin
 ```
+
+The Obsidian plugin source is important to have on hand — our relay-server and lens-editor need to stay compatible with the Relay.md client protocol (auth handshake, CRDT sync, file tokens, shared folder format).
 
 ### 3. Set up upstream remote for relay-server
 
