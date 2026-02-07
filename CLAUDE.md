@@ -122,12 +122,7 @@ The editor connects to the relay server at the URL configured in its settings. D
 
 ## Custom Relay Server Changes
 
-Our fork (`lens-custom` branch) has two critical HMAC auth fixes on top of upstream:
-
-1. **`auth.rs`** — `gen_doc_token_auto()`: Supports HMAC keys in document token generation
-2. **`server.rs`** — `gen_file_token_auto()`: Generates file tokens for server/prefix tokens in download-url
-
-**Why:** Relay.md doesn't provide service account API keys. Without these fixes, you can have either image sync between users OR git-sync, but not both. Our fix enables both simultaneously.
+Our fork (`lens-custom` branch) has two critical HMAC auth fixes on top of upstream that enable both Relay.md client auth and service account auth (for relay-git-sync) to coexist. See [relay-auth-customizations.md](./relay-auth-customizations.md) for details.
 
 Additional work on `lens-custom`:
 - Link indexer for wikilink extraction and backlink tracking
